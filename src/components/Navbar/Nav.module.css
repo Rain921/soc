@@ -1,0 +1,16 @@
+.app_nav {
+    grid-area: n;
+    background-color: black;
+    color: #fff;
+}
+
+.item {
+    color: #fff;
+}
+.item.active{
+color: red;
+}
+
+.item  a{
+    color: inherit;
+}
