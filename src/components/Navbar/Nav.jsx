@@ -5,10 +5,10 @@ const Nav = () => {
     return (
         <nav className={classes.app_nav}>
             <div className={classes.item}>
-                <a href="#"> Profile</a>
+                <a href="/profile">Profile</a>
             </div>
             <div className={`${classes.item} ${classes.active}`}>
-                <a href="#"> Messeages</a>
+                <a href="/dialogs"> Messeages</a>
             </div>
             <div className={classes.item}>
                 <a href="#"> music</a>
