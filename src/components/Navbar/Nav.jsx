@@ -4,10 +4,10 @@ import classes from './Nav.module.css';
 const Nav = () => {
     return (
         <nav className={classes.app_nav}>
-            <div className={`${classes.item} ${classes.active}`}>
+            <div className={classes.item}>
                 <a href="#"> Profile</a>
             </div>
-            <div className={classes.item}>
+            <div className={`${classes.item} ${classes.active}`}>
                 <a href="#"> Messeages</a>
             </div>
             <div className={classes.item}>

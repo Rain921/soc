@@ -4,7 +4,7 @@ import Mypost from "./Mypost/Mypost";
 
 const Profile = () => {
     return (
-        <div className={classes.app_content}>
+        <div>
             main content
             <div>
                 <img
