@@ -2,15 +2,19 @@
     grid-area: n;
     background-color: black;
     color: #fff;
+    padding: 20px;
 }
 
 .item {
     color: #fff;
 }
-.item.active{
-color: red;
+
+.item a.activeLink {
+    color: red;
+    outline: none;
 }
 
-.item  a{
-    color: inherit;
+.item a {
+    color: #fff;
+    text-decoration: none;
 }
