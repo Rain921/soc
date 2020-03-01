@@ -2,42 +2,45 @@ import React from 'react';
 import classes from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
 
+const DialogItem = (props) => {
+    let path = "/dialogs/" + props.id;
+    return (
+        <div className={ classes.dialogss + ' ' + classes.actives }>
+            <NavLink to={path} activeClassName={classes.activeLink2}>{props.name}</NavLink>
+        </div>
+    )
+
+};
+const Messages = (props) => {
+    return (
+        <div className={ classes.message }>
+            {props.name}
+        </div>
+
+    )
+
+};
+
 const Dialogs = (props) => {
+
 
     return (
         <div className={ classes.dialogs }>
             <div className={ classes.dialogs_item }>
-                <div className={ classes.dialog + ' ' + classes.active }>
-                    <NavLink to="/dialogs/1">name Dimich</NavLink>
-                </div>
-                <div className={ classes.dialog }>
-                    name Andreri
-                </div>
-                <div className={ classes.dialog }>
-                    name 3
-                </div>
-                <div className={ classes.dialog }>
-                    name 4
-                </div>
-                <div className={ classes.dialog }>
-                    name 5
-                </div>
-                <div className={ classes.dialog }>
-                    name 6
-                </div>
+               <DialogItem name="name Dimich" id="1" />
+                <DialogItem name="name agfdfg" id="2" />
+                <DialogItem name="name jhjgj" id="3" />
+                <DialogItem name="name ghjgjgjh" id="4" />
+                <DialogItem name="name sdfsdfs" id="5" />
+                <DialogItem name="name khjkhjk" id="6" />
+
             </div>
             <div className={ classes.messages }>
-                <div className={ classes.message }>
-                    hi
+              <Messages name="hi"/>
+                <Messages name="how you?"/>
+                <Messages name="jghjghjghjghj"/>
 
-                </div>
-                <div className={ classes.message }>
-                    how you
 
-                </div>
-                <div className={ classes.message }>
-
-                </div>
 
             </div>
 

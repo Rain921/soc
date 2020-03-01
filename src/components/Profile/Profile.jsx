@@ -8,7 +8,7 @@ const Profile = () => {
             main content
             <div>
                 <img
-                    src="https://cdn.img.com/joyent.wme/public/wme/assets/ec050984-7b81-11e6-96e0-8905cd656caf.jpg?v=13"
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/7a/1859-Martinique.web.jpg"
                     alt=""/>
             </div>
             <div>ava + description</div>
