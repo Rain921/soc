@@ -22,6 +22,14 @@ const Messages = (props) => {
 };
 
 const Dialogs = (props) => {
+    let dialosData = [
+        {id:1,name: 'Dimich'},
+        {id:2,name: 'gjgjghjg'},
+        {id:3,name: 'ghjghjghj'},
+        {id:4,name: 'gjjghjg'},
+        {id:5,name: 'jkghghkjg'},
+        {id:6,name: 'Dimich'}
+        ]
 
 
     return (
