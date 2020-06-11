@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {rerenderEnTree} from "./render";
+import state from "./redux/state";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// перекидываем ul в рендр.js чтобы вызвать функцию через стайт.js и стейт кидаем через пропсы в функцию , чтобы не было циклической зависимости
+rerenderEnTree(state);
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

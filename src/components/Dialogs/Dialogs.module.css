@@ -4,17 +4,44 @@
 }
 .dialogs_item{
     padding: 10px;
+    max-width: 138px;
+    width: 100%;
 }
 .dialogs_item .dialogss a  {
     color: green;
-
 }
-
 .activeLink2{
     color: red!important;
-
 }
-
 .messages{
     padding: 10px;
+    max-width: 138px;
+    width: 100%;
+}
+.message{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.message img{
+    width: 17px;
+    height: 17px;
+
+}
+.dialogs{
+    display: flex;
+    justify-content: space-around;
+}
+.dialogss a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.dialogss a img{
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+
 }

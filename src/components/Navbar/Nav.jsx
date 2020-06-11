@@ -1,26 +1,24 @@
 import React from 'react';
 import classes from './Nav.module.css';
-import {NavLink} from "react-router-dom";
+import Friends from "./Friends/Friends";
+import NavList from "./NavList/NavList";
 
-const Nav = () => {
+
+
+
+const Nav = (props) => {
+    let NavListElement = props.state.sideMenu
+        .map(navList => <NavList menu={navList.menu} id={navList.id}/>);
+
+
+
     return (
+        <div className={classes.app_sidebar}>
         <nav className={classes.app_nav}>
-            <div className={classes.item}>
-                <NavLink to="/profile" activeClassName={classes.activeLink}>Profile</NavLink>
-            </div>
-            <div className={`${classes.item} ${classes.active}`}>
-                <NavLink to="/dialogs" activeClassName={classes.activeLink}>Messages</NavLink>
-            </div>
-            <div className={classes.item}>
-                <NavLink to="/music" activeClassName={classes.activeLink}>music</NavLink>
-            </div>
-            <div className={classes.item}>
-                <NavLink to="#">news</NavLink>
-            </div>
-            <div className={classes.item}>
-                <NavLink to="/settings" activeClassName={classes.activeLink}>setings</NavLink>
-            </div>
+            {NavListElement}
         </nav>
+            <Friends state={props.state.friendsData}/>
+        </div>
 
     );
 };

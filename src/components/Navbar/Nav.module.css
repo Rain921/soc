@@ -1,8 +1,5 @@
 .app_nav {
-    grid-area: n;
-    background-color: black;
-    color: #fff;
-    padding: 20px;
+   
 }
 
 .item {
@@ -17,4 +14,11 @@
 .item a {
     color: #fff;
     text-decoration: none;
+}
+.app_sidebar{
+    grid-area: n;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+
 }

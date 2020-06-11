@@ -2,23 +2,32 @@ import React from 'react';
 import classes from './Mypost.module.css';
 import Post from "./Post/Post";
 
-const Mypost = () => {
-    let postData = [
-        {id:1,message: 'hi ,how are you?', likecounts:34},
-        {id:2,message: 'it ,my firs post', likecounts:23 }
-    ]
+const Mypost = (props) => {
 
+    let newPostElement = React.createRef(); // создается ссылка реакта аналог id из верстки
+
+    let postElement = props.data.map(post => <Post message={post.message}  likescount={post.likecounts} />)
+    let addPost = () => {
+       let text = newPostElement.current.value;
+        props.addPost(text); //перекинули пропс с bll в ui и вызвали внутри value из textarea
+        newPostElement.current.value = "";
+    };
+
+
+// (/*колбек функция*/) => { alert('ghfghfgh') /*вызов функции*/}
+
+//colback function on button
     return (
         <div>
             my post
             <div>
-                <textarea name="post" id="" cols="30" rows="10">
+                <textarea ref={newPostElement} id="newPost" >
                 </textarea>
-                <button>add post</button>
+
+                <button onClick={addPost}>add post</button>
             </div>
             <div className={ classes.posts }>
-                <Post message={postData[0].message}  likescount={postData[0].likecounts} />
-                <Post message={postData[1].message}  likescount={postData[1].likecounts} />
+                {postElement}
             </div>
         </div>
     )

@@ -1,18 +1,20 @@
 import React from 'react';
-import classes from './Profile.module.css';
 import Mypost from "./Mypost/Mypost";
+import Infoprof from "./ProfileInfo/Infoprof";
+import classes from './Profile.module.css';
 
-const Profile = () => {
+
+const Profile = (props) => {
+
+
+
     return (
-        <div>
+
+        <div className={classes.prof}>
             main content
-            <div>
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/7a/1859-Martinique.web.jpg"
-                    alt=""/>
-            </div>
+            <Infoprof />
             <div>ava + description</div>
-           <Mypost />
+           <Mypost data={props.state.postData} addPost={props.addPost} />
         </div>
     )
 };
